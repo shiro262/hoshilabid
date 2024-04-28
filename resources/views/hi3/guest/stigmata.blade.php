@@ -35,7 +35,7 @@
     @foreach($stigmata as $stig)
     <div class="card-transparent" style="width: 18rem;">
         <a href="{{ route('View Stigmata Guest', [$stig->id]) }}">
-            <img class="card-img-top" src="{{asset('storage/stigmataimage/'.$stig->Image)}}" height="240" alt="Card image cap">
+            <img class="card-img-top" src="{{asset('storage/stigmataimage/'.$stig->image)}}" height="240" alt="Card image cap">
         </a>
         <div class="card-body">
           <p class="card-text" style="color:White;" >{{ $stig->name }}</p>

@@ -22,8 +22,11 @@ return new class extends Migration
             $table->longText('detail');
             $table->string('rarity');
             $table->string('tier');
-            $table->foreignId('weaponhgenshin_id');
-            $table->foreignId('artifact_id');
+            $table->foreignId('weapon_sign_genshin_id');
+            $table->foreignId('weapon_alt1_genshin_id');
+            $table->foreignId('weapon_alt2_genshin_id');
+            $table->foreignId('artifact_opt1_id');
+            $table->foreignId('artifact_opt2_id');
             $table->string('image');
             $table->timestamps();
         });

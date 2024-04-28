@@ -34,18 +34,22 @@
                         Weapon<br/>
                         <hr style="height:10px; border-width:10px; color:blue;">
                         Signature:<br/>
-                        <img style="height:50px;border-width:50px;" src="{{asset('storage/weaponimagehonkai/'.$chara->bestweapon->image)}}">  {{$chara->bestweapon->name}}
+                        <img style="height:50px;border-width:50px;" src="{{asset('storage/weaponimagehonkai/'.$chara->signweapon->image)}}">  {{$chara->signweapon->name}}
                         <br/>
-                        Alternative:
+                        Alternative:<br/>
+                        <img style="height:50px;border-width:50px;" src="{{asset('storage/weaponimagehonkai/'.$chara->alt1weapon->image)}}">  {{$chara->alt1weapon->name}}
+                        <br/>
+                        <img style="height:50px;border-width:50px;" src="{{asset('storage/weaponimagehonkai/'.$chara->alt2weapon->image)}}">  {{$chara->alt2weapon->name}}
                     </h4>
                     <hr style="height:10px; border-width:10px;">
                     <h4 class="fw-normal mb-1 pb-1" style="letter-spacing: 1px;text-align:left; color:White;">
                         Stigmata Set<br/>
                         <hr style="height:10px; border-width:10px; color:blue;">
                         Signature:<br/>
-                        <img style="height:75px;border-width:75px;" src="{{asset('storage/stigmataimage/'.$chara->beststigmata->Image)}}"> {{$chara->beststigmata->name}}
+                        <img style="height:75px;border-width:75px;" src="{{asset('storage/stigmataimage/'.$chara->signstigmata->image)}}"> {{$chara->signstigmata->name}}
                         <br/>
-                        Alternative:
+                        Alternative:<br/>
+                        <img style="height:75px;border-width:75px;" src="{{asset('storage/stigmataimage/'.$chara->altstigmata->image)}}"> {{$chara->altstigmata->name}}
                     </h4>
                     <br/><a href="{{ url()->previous() }}" class="btn btn-outline-light" style="float: left;"><</a>
                 </div>

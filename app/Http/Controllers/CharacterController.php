@@ -71,6 +71,16 @@ class CharacterController extends Controller
 
         return view('gi.guest.character', compact('chara', 'query'));
     }
+    public function tierlistgenshinguest()
+    {
+        $sptier = CharacterGenshin::where('tier', 'S+')->orderBy('name')->get();
+        $stier = CharacterGenshin::where('tier', 'S')->orderBy('name')->get();
+        $atier = CharacterGenshin::where('tier', 'A')->orderBy('name')->get();
+        $btier = CharacterGenshin::where('tier', 'B')->orderBy('name')->get();
+        $ctier = CharacterGenshin::where('tier', 'C')->orderBy('name')->get();
+
+        return view('gi.guest.tierlist', compact('sptier', 'stier', 'atier', 'btier', 'ctier'));
+    }
 
     //member
     public function charaindexmember()

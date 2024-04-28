@@ -53,6 +53,7 @@ Route::middleware(['isGuest'])->group(function(){
     Route::get('gi/guest/character', [CharacterController::class, 'charagenshinindexguest'])->name('Guest Character Genshin Page');
     Route::get('gi/guest/character/search', [CharacterController::class, 'searchgenshinforguest'])->name('Search Character Genshin Guest');
     Route::get('gi/guest/character/{id}', [CharacterController::class, 'showcharagenshinguest'])->name('View Character Genshin Guest');
+    Route::get('gi/guest/tierlist', [CharacterController::class, 'tierlistgenshinguest'])->name('Guest Tier List Genshin Page');
 });
 
 Route::middleware(['auth'])->group(function(){
