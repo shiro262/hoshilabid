@@ -25,7 +25,7 @@
                 <a class="nav-link active" href={{ route('Guest Character Genshin Page') }}>Character</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link active" href={{ route('Guest Tier List Page') }}>Tier List</a>
+                <a class="nav-link active" href={{ route('Guest Tier List Genshin Page') }}>Tier List</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link active" href={{ route('Guest Weapon Page') }}>Weapon</a>

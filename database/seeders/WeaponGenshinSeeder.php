@@ -30,6 +30,21 @@ class WeaponGenshinSeeder extends Seeder
                 'image' => "Splendor of Tranquil Waters.png",
                 'created_at' => now(),
                 'updated_at' => now(),
+            ],
+            [
+                'name' => "A Thousand Floating Dreams",
+                'type' => "Catalyst",
+                'rarity' => "5star",
+                'detail' =>
+                "A Thousand Nights' Dawnsong\r\n
+                Party members other than the equipping character will provide the equipping character with buffs based on whether their Elemental Type is the same as the latter or not. If their Elemental Types are the same, increase Elemental Mastery by 32. If not, increase the equipping character's DMG Bonus from their Elemental Type by 10%. Each of the aforementioned effects can have up to 3 stacks. Additionally, all nearby party members other than the equipping character will have their Elemental Mastery increased by 40. Multiple such effects from multiple such weapons can stack.",
+                'stats' =>
+                "Base ATK (Lv.1-90): 44 - 542\r\n
+                2nd Stat (Lv.1-90): 58 - 265 Elemental Mastery",
+                'source' => "Weapon Event Wishes",
+                'image' => "A Thousand Floating Dreams.png",
+                'created_at' => now(),
+                'updated_at' => now(),
             ]
         ]);
     }

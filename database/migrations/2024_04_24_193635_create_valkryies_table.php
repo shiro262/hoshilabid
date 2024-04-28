@@ -22,8 +22,11 @@ return new class extends Migration
             $table->longText('detail');
             $table->string('rarity');
             $table->string('tier');
-            $table->foreignId('weaponhi3_id');
-            $table->foreignId('stigmata_id');
+            $table->foreignId('weapon_sign_hi3_id');
+            $table->foreignId('weapon_alt1_hi3_id');
+            $table->foreignId('weapon_alt2_hi3_id');
+            $table->foreignId('stigmata_sign_id');
+            $table->foreignId('stigmata_alt_id');
             $table->string('image');
             $table->timestamps();
         });

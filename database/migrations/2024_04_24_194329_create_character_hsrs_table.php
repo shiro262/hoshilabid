@@ -22,9 +22,13 @@ return new class extends Migration
             $table->longText('detail');
             $table->string('rarity');
             $table->string('tier');
-            $table->foreignId('lightcone_id');
-            $table->foreignId('relic_id');
-            $table->foreignId('planar_id');
+            $table->foreignId('lightcone_sign_id');
+            $table->foreignId('lightcone_alt1_id');
+            $table->foreignId('lightcone_alt2_id');
+            $table->foreignId('relic_opt1_id');
+            $table->foreignId('relic_opt2_id');
+            $table->foreignId('planar_opt1_id');
+            $table->foreignId('planar_opt2_id');
             $table->string('image');
             $table->timestamps();
         });
