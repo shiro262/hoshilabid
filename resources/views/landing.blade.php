@@ -29,7 +29,7 @@
         Sumber panduan terbaik untuk game Hoyoverse favoritmu!
     </h1>
     <p class="card-text" style="color:White;" >
-        HoshiLab.id menyediakan forum komunitas, berita, tier list, dan panduan terperinci untuk Hoyoverse Games! <br/>
+        HoshiLab.id menyediakan forum komunitas, berita, tier list, dan panduan terperinci untuk Games Hoyoverse! <br/>
         Semua yang kamu butuhkan di satu tempat! <br/>
         Pilih Game:
     </p>
@@ -53,7 +53,7 @@
           </div>
         </div>
         <div class="card-transparent" style="width: 20rem;">
-          <a href=>
+          <a href={{ route('Guest Home Honkai Star Rail') }}>
               <img class="card-img-top" src="{{asset('storage/image/starrail.jpg')}}" alt="Card image cap">
           </a>
           <div class="card-body">

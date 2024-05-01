@@ -1,4 +1,4 @@
-@section('title', 'Character')
+@section('title', 'Weapon')
 @extends('template.masterguestgenshin')
 @section('content')
 <div class="card text-center" style="background:black;">
@@ -7,7 +7,7 @@
     <br/><br/><br/>
     <nav class="navbar navbar-expand-lg">
         <div class="container">
-              <form class="d-flex my-2 my-lg-0" action="{{ route('Search Character Genshin Guest') }}">
+              <form class="d-flex my-2 my-lg-0" action="{{ route('Search Weapon Genshin Guest') }}">
                 @if(isset($query))
                     <input name="search" class="form-control me-2" type="search" placeholder="Cari disini" value="{{$query}}">
                 @else
@@ -19,7 +19,7 @@
         </div>
     </nav>
     <h1 class="card-title" style="color:white; font-family:Brush Script Std; font-size: 40px;">
-        Character
+        Weapon
     </h1>
     @if(isset($query))
         <h5 class="fw-normal" style="letter-spacing: 1px; color:white;">
@@ -27,25 +27,24 @@
         </h5>
     @else
         <h6 class="fw-normal" style="letter-spacing: 1px; color:white;">
-            Daftar karakter yang tersedia di Genshin Impact <br/>
-            Catatan: Asumsikan semua karakter bintang 4 berada dalam kondisi C6 <br/><br/><br/>
+            Daftar senjata yang tersedia di Honkai Impact 3rd
         </h6>
     @endif
     <br/>
     <div class="row row-cols-3 justify-content-md-center">
-    @foreach($chara as $c)
+    @foreach($weapon as $wea)
     <div class="card-transparent" style="width: 18rem;">
-        <a href="{{ route('View Character Genshin Guest', [$c->id]) }}">
-            <img class="card-img-top" src="{{asset('storage/characterimagegenshin/'.$c->image)}}" height="240" alt="Card image cap">
+        <a href="{{ route('View Weapon Genshin Guest', [$wea->id]) }}">
+            <img class="card-img-top" src="{{asset('storage/weaponimagegenshin/'.$wea->image)}}" height="240" alt="Card image cap">
         </a>
         <div class="card-body">
-          <p class="card-text" style="color:White;" >{{ $c->name }}<br/>{{$c->role}}</p>
+          <p class="card-text" style="color:White;" >{{ $wea->name }}<br/>{{$wea->type}}</p>
         </div>
       </div>
     @endforeach
 </div>
 <div class="d-flex justify-content-center" style="margin: 2rem">
-    {{$chara->links()}}
+    {{$weapon->links()}}
 </div>
 </div>
 @endsection

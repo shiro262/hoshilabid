@@ -1,5 +1,5 @@
 @section('title', $chara->name)
-@extends('template.masterguestgenshin')
+@extends('template.masterguesthsr')
 @section('content')
 
 <div class="card text-center" style="background:black;">
@@ -13,7 +13,7 @@
           <div class="card-transparent" style="border-radius: 1rem;">
             <div class="row g-0">
               <div class="col-md-6 col-lg-5 d-none d-md-block">
-                <img src="{{asset('storage/characterimagegenshin/'.$chara->image)}}"
+                <img src="{{asset('storage/characterimagehsr/'.$chara->image)}}"
                   alt="login form" class="img-fluid" style="border-radius: 1rem 0 0 1rem;" />
               </div>
               <div class="col-md-6 col-lg-7 d-flex align-items-center">
@@ -28,33 +28,34 @@
                             echo nl2br($val);
                         ?>
                     </h4>
-                    <h4 class="fw-normal mb-1 pb-1" style="letter-spacing: 1px; text-align:left; color:White;">Type: {{$chara->type}}</h4>
+                    <h4 class="fw-normal mb-1 pb-1" style="letter-spacing: 1px; text-align:left; color:White;">Type: {{$chara->path}}</h4>
                     <h4 class="fw-normal mb-1 pb-1" style="letter-spacing: 1px; text-align:left; color:White;">Element: {{$chara->element}}</h4>
                     <h4 class="fw-normal mb-1 pb-1" style="letter-spacing: 1px; text-align:left; color:White;">Rarity: {{$chara->rarity}}</h4>
                     <h4 class="fw-normal mb-1 pb-1" style="letter-spacing: 1px; text-align:left; color:White;">Role: {{$chara->role}}</h4>
-                    <h4 class="fw-normal mb-1 pb-1" style="letter-spacing: 1px; text-align:left; color:White;">Tier (by HoshiLab): {{$chara->tier}}</h4>
+                    <h4 class="fw-normal mb-1 pb-1" style="letter-spacing: 1px; text-align:left; color:White;">Tier (Memory of Chaos): {{$chara->tier_moc}}</h4>
+                    <h4 class="fw-normal mb-1 pb-1" style="letter-spacing: 1px; text-align:left; color:White;">Tier (Pure Fiction): {{$chara->tier_pf}}</h4>
                     <hr style="height:10px;border-width:10px;">
                     <h4 class="fw-bold mb-1 pb-1" style="letter-spacing: 1px; text-align:left; color:White;">Rekomendasi Build</h4>
                     <h4 class="fw-normal mb-1 pb-1" style="letter-spacing: 1px; text-align:left; color:White;">
                         Weapon<br/>
                         <hr style="height:10px; border-width:10px; color:blue;">
                         Signature:<br/>
-                        <img style="height:50px;border-width:50px;" src="{{asset('storage/weaponimagegenshin/'.$chara->signweapon->image)}}">  {{$chara->signweapon->name}}
+                        <img style="height:50px;border-width:50px;" src="{{asset('storage/lightconeimage/'.$chara->signlightcone->image)}}">  {{$chara->signlightcone->name}}
                         <br/>
                         Alternative:<br/>
-                        <img style="height:50px;border-width:50px;" src="{{asset('storage/weaponimagegenshin/'.$chara->alt1weapon->image)}}">  {{$chara->alt1weapon->name}}
+                        <img style="height:50px;border-width:50px;" src="{{asset('storage/lightconeimage/'.$chara->alt1lightcone->image)}}">  {{$chara->alt1lightcone->name}}
                         <br/>
-                        <img style="height:50px;border-width:50px;" src="{{asset('storage/weaponimagegenshin/'.$chara->alt2weapon->image)}}">  {{$chara->alt2weapon->name}}
+                        <img style="height:50px;border-width:50px;" src="{{asset('storage/lightconeimage/'.$chara->alt2lightcone->image)}}">  {{$chara->alt2lightcone->name}}
                     </h4>
                     <hr style="height:10px; border-width:10px;">
                     <h4 class="fw-normal mb-1 pb-1" style="letter-spacing: 1px;text-align:left; color:White;">
                         Artifact Set<br/>
                         <hr style="height:10px; border-width:10px; color:blue;">
                         Option 1:<br/>
-                        <img style="height:75px;border-width:75px;" src="{{asset('storage/artifactimage/'.$chara->artifactoption1->image)}}"> {{$chara->artifactoption1->name}}
+                        <img style="height:75px;border-width:75px;" src="{{asset('storage/relicimage/'.$chara->relicoption1->image)}}"> {{$chara->relicoption1->name}}
                         <br/>
                         Option 2:<br/>
-                        <img style="height:75px;border-width:75px;" src="{{asset('storage/artifactimage/'.$chara->artifactoption2->image)}}"> {{$chara->artifactoption2->name}}
+                        <img style="height:75px;border-width:75px;" src="{{asset('storage/relicimage/'.$chara->relicoption2->image)}}"> {{$chara->relicoption2->name}}
                     </h4>
                     <br/><a href="{{ url()->previous() }}" class="btn btn-outline-light" style="float: left;"><</a>
                 </div>

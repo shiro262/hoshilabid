@@ -21,7 +21,8 @@ return new class extends Migration
             $table->string('role');
             $table->longText('detail');
             $table->string('rarity');
-            $table->string('tier');
+            $table->string('tier_moc');
+            $table->string('tier_pf');
             $table->foreignId('lightcone_sign_id');
             $table->foreignId('lightcone_alt1_id');
             $table->foreignId('lightcone_alt2_id');

@@ -18,7 +18,9 @@ class StigmataSeeder extends Seeder
         DB::table('stigmatas')->insert([
             [
                 'name' => "Wings of Reason",
-                'detail' => "Bronya: N-EX (T), Bronya: N-EX (M), & Bronya: N-EX (B)",
+                'detail' => "Bronya: N-EX (T), Bronya: N-EX (M), & Bronya: N-EX (B)
+                Total Max Stats:
+                HP : 1318 ATK 176 .DAN SETERUSNYA...",
                 'source' => "Silverwing: N-EX debut expansion supply bonus",
                 'image' => "Wings of Reason.png",
                 'created_at' => now(),

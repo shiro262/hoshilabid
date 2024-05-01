@@ -21,6 +21,11 @@ class HomeController extends Controller
     {
         return view('gi.guest.home');
     }
+    //hsr
+    public function indexguesthsr()
+    {
+        return view('hsr.guest.home');
+    }
 
     //member
     //honkai impact

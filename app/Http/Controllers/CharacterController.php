@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\CharacterGenshin;
+use App\Models\CharacterHsr;
 use App\Models\Stigmata;
 use App\Models\Valkryie;
 use App\Models\WeaponHonkai;
@@ -66,7 +67,6 @@ class CharacterController extends Controller
     {
         $query = $request->search;
         $chara = CharacterGenshin::where('name', 'like', '%'.$query.'%')
-        ->orWhere('detail', 'like', '%'.$query.'%')
         ->orderBy('name')->paginate(10)->withQueryString();
 
         return view('gi.guest.character', compact('chara', 'query'));
@@ -80,6 +80,38 @@ class CharacterController extends Controller
         $ctier = CharacterGenshin::where('tier', 'C')->orderBy('name')->get();
 
         return view('gi.guest.tierlist', compact('sptier', 'stier', 'atier', 'btier', 'ctier'));
+    }
+    //honkai star rail
+    public function charahsrindexguest()
+    {
+        $chara = CharacterHsr::orderBy('name')->paginate(10);
+
+        return view('hsr.guest.character', compact('chara'));
+    }
+    public function showcharahsrguest($id)
+    {
+        $chara = CharacterHsr::all()->find($id);
+
+        return view('hsr.guest.viewcharacter', compact('chara'));
+    }
+    public function searchhsrforguest(Request $request)
+    {
+        $query = $request->search;
+        $chara = CharacterHsr::where('name', 'like', '%'.$query.'%')
+        ->orderBy('name')->paginate(10)->withQueryString();
+
+        return view('hsr.guest.character', compact('chara', 'query'));
+    }
+    public function tierlisthsrguest()
+    {
+        $sptier = CharacterHsr::where('tier_moc', 'S+')->orderBy('name')->get();
+        $stier = CharacterHsr::where('tier_moc', 'S')->orderBy('name')->get();
+        $atier = CharacterHsr::where('tier_moc', 'A')->orderBy('name')->get();
+        $btier = CharacterHsr::where('tier_moc', 'B')->orderBy('name')->get();
+        $ctier = CharacterHsr::where('tier_moc', 'C')->orderBy('name')->get();
+        $dtier = CharacterHsr::where('tier_moc', 'D')->orderBy('name')->get();
+
+        return view('hsr.guest.tierlist', compact('sptier', 'stier', 'atier', 'btier', 'ctier', 'dtier'));
     }
 
     //member

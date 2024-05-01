@@ -19,19 +19,27 @@
         </a>
         <ul class="navbar-nav me-auto">
             <li class="nav-item">
-                <a class="nav-link active" href={{ route('Guest Home Genshin Impact') }}>Home</a>
+                <a class="nav-link active" href={{ route('Guest Home Honkai Star Rail') }}>Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link active" href={{ route('Guest Character Genshin Page') }}>Character</a>
+                <a class="nav-link active" href={{ route('Guest Character Honkai Star Rail Page') }}>Character</a>
+            </li>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:white;">
+                      Tier List
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="{{ route('Guest Tier List Honkai Star Rail Page') }}">Memory of Chaos</a></li>
+                      <li><a class="dropdown-item" href="{{route('Guest Tier List Honkai Star Rail Page')}}">Pure Fiction</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <li class="nav-item">
+                <a class="nav-link active" href={{ route('Guest Weapon Genshin Page') }}>Lightcone</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link active" href={{ route('Guest Tier List Genshin Page') }}>Tier List</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link active" href={{ route('Guest Weapon Genshin Page') }}>Weapon</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link active" href={{ route('Guest Stigmata Page') }}>Artifact</a>
+                <a class="nav-link active" href={{ route('Guest Stigmata Page') }}>Relic</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link active" href={{ route('Guest Guide Page') }}>Guide</a>

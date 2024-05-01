@@ -54,6 +54,26 @@ Route::middleware(['isGuest'])->group(function(){
     Route::get('gi/guest/character/search', [CharacterController::class, 'searchgenshinforguest'])->name('Search Character Genshin Guest');
     Route::get('gi/guest/character/{id}', [CharacterController::class, 'showcharagenshinguest'])->name('View Character Genshin Guest');
     Route::get('gi/guest/tierlist', [CharacterController::class, 'tierlistgenshinguest'])->name('Guest Tier List Genshin Page');
+    //weapon + artifact - genshin impact
+    Route::get('gi/guest/weapon', [WeaponController::class, 'weapongenshinindexguest'])->name('Guest Weapon Genshin Page');
+    Route::get('gi/guest/weapon/search', [WeaponController::class, 'searchweapongenshinforguest'])->name('Search Weapon Genshin Guest');
+    Route::get('gi/guest/weapon/{id}', [WeaponController::class, 'showweapongenshinguest'])->name('View Weapon Genshin Guest');
+    // Route::get('hi3/guest/stigmata', [ItemController::class, 'stigmataindexguest'])->name('Guest Stigmata Page');
+    // Route::get('hi3/guest/stigmata/search', [ItemController::class, 'searchstigmataforguest'])->name('Search Stigmata Guest');
+    // Route::get('hi3/guest/stigmata/{id}', [ItemController::class, 'showstigmataguest'])->name('View Stigmata Guest');
+    // //news - Honkai Impact 3
+    // Route::get('hi3/guest/news', [NewsController::class, 'newsindexguest'])->name('Guest News Page');
+    // Route::get('hi3/guest/news/{id}', [NewsController::class, 'shownewsguest'])->name('View News Guest');
+    // //guide - Honkai Impact 3
+    // Route::get('hi3/guest/guide', [GuideController::class, 'guideindexguest'])->name('Guest Guide Page');
+    // Route::get('hi3/guest/guide/{id}', [GuideController::class, 'showguideguest'])->name('View Guide Guest');
+    //home - honkai star rail
+    Route::get('hsr/guest/home', [HomeController::class, 'indexguesthsr'])->name('Guest Home Honkai Star Rail');
+    //character + tier list - genshin impact
+    Route::get('hsr/guest/character', [CharacterController::class, 'charahsrindexguest'])->name('Guest Character Honkai Star Rail Page');
+    Route::get('hsr/guest/character/search', [CharacterController::class, 'searchhsrforguest'])->name('Search Character Honkai Star Rail Guest');
+    Route::get('hsr/guest/character/{id}', [CharacterController::class, 'showcharahsrguest'])->name('View Character Honkai Star Rail Guest');
+    Route::get('hsr/guest/tierlist', [CharacterController::class, 'tierlisthsrguest'])->name('Guest Tier List Honkai Star Rail Page');
 });
 
 Route::middleware(['auth'])->group(function(){
