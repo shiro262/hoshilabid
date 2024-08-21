@@ -1,4 +1,4 @@
-@section('title', 'Weapon')
+@section('title', 'Weapon - Genshin Impact | HoshiLab')
 @extends('template.masterguestgenshin')
 @section('content')
 <div class="card text-center" style="background:black;">
@@ -27,21 +27,78 @@
         </h5>
     @else
         <h6 class="fw-normal" style="letter-spacing: 1px; color:white;">
-            Daftar senjata yang tersedia di Honkai Impact 3rd
+            Daftar senjata yang tersedia di Genshin Impact<br/>
+            Terakhir Update: 03/06/2024<br/><br/>
         </h6>
+        <a class="btn btn-transparent" href="{{ route('Guest Weapon Genshin Page') }}" role="button">
+            <img class="card-img-top" src="{{asset('storage/image/weapon_genshin/All.png')}}" style="width: 3rem;" alt="Card image cap">
+        </a>
+        <a class="btn btn-transparent" href="{{ route('Guest Weapon Bow Genshin Page') }}" role="button">
+            <img class="card-img-top" src="{{asset('storage/image/weapon_genshin/Bow.png')}}" style="width: 3rem;" alt="Card image cap">
+        </a>
+        <a class="btn btn-transparent" href="{{ route('Guest Weapon Catalyst Genshin Page') }}" role="button">
+            <img class="card-img-top" src="{{asset('storage/image/weapon_genshin/Catalyst.png')}}" style="width: 3rem;" alt="Card image cap">
+        </a>
+        <a class="btn btn-transparent" href="{{ route('Guest Weapon Claymore Genshin Page') }}" role="button">
+            <img class="card-img-top" src="{{asset('storage/image/weapon_genshin/Claymore.png')}}" style="width: 3rem;" alt="Card image cap">
+        </a>
+        <a class="btn btn-transparent" href="{{ route('Guest Weapon Polearm Genshin Page') }}" role="button">
+            <img class="card-img-top" src="{{asset('storage/image/weapon_genshin/Polearm.png')}}" style="width: 3rem;" alt="Card image cap">
+        </a>
+        <a class="btn btn-transparent" href="{{ route('Guest Weapon Sword Genshin Page') }}" role="button">
+            <img class="card-img-top" src="{{asset('storage/image/weapon_genshin/Sword.png')}}" style="width: 3rem;" alt="Card image cap">
+        </a>
+        <br/>
     @endif
     <br/>
-    <div class="row row-cols-3 justify-content-md-center">
-    @foreach($weapon as $wea)
-    <div class="card-transparent" style="width: 18rem;">
-        <a href="{{ route('View Weapon Genshin Guest', [$wea->id]) }}">
-            <img class="card-img-top" src="{{asset('storage/weaponimagegenshin/'.$wea->image)}}" height="240" alt="Card image cap">
-        </a>
-        <div class="card-body">
-          <p class="card-text" style="color:White;" >{{ $wea->name }}<br/>{{$wea->type}}</p>
-        </div>
-      </div>
-    @endforeach
+    <div class="col d-flex justify-content-center">
+        <table class="table w-75 p-3" style="border:1px solid white;">
+            <thead class="thead-dark">
+              <tr style="color: white; text-align: left;">
+                <th scope="col">Weapon</th>
+                <th scope="col"></th>
+                <th scope="col">Type</th>
+                <th scope="col">Rarity</th>
+                <th scope="col">Skill</th>
+                <th scope="col">Drop</th>
+              </tr>
+            </thead>
+            <tbody>
+            @foreach ($weapon as $wea)
+              <tr style="color: white; text-align: left;">
+                <td>
+                    <a href="{{ route('View Weapon Genshin Guest', [$wea->id]) }}">
+                        <img src="{{asset('storage/weaponimagegenshin/'.$wea->image)}}" style="width: 5rem; margin-top:10px;" alt="Card image cap">
+                    </a>
+                </td>
+                <td>
+                    <br/>
+                    {{ $wea->name }}
+                </td>
+                <td>
+                    <br/>{{ $wea->type }}
+                </td>
+                <td>
+                    <br/>{{ $wea->rarity }}
+                </td>
+                <td>
+                    @if ($wea->detail == "-")
+                        <br/>{{ $wea->detail }}
+                    @else
+                        <?php
+                            $val = $wea->detail;
+                            echo nl2br($val);
+                        ?>
+                    @endif
+                </td>
+                <td>
+                    <br/>{{ $wea->source }}
+                </td>
+              </tr>
+            @endforeach
+            </tbody>
+          </table>
+    </div>
 </div>
 <div class="d-flex justify-content-center" style="margin: 2rem">
     {{$weapon->links()}}

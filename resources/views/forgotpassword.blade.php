@@ -13,15 +13,19 @@
               </div>
               <div class="col-md-6 col-lg-7 d-flex align-items-center">
                 <div class="card-body p-4 p-lg-5 text-black">
-                  <form method="POST" action=>
+                  <form method="POST" action={{route('guest.method.checkUsername')}}>
                     @csrf
                     <div class="d-flex align-items-center mb-3 pb-1">
                       <span class="h1 fw-bold mb-0">Reset Password</span>
                     </div>
-                    <h6 class="fw-normal mb-1 pb-1" style="letter-spacing: 1px;">Email <span style="color:red;">*</span></h6>
-                    <div class="form-outline mb-4">
-                      <input type="email" id="form2Example17" class="form-control form-control-lg" placeholder="" name="email">
+                    <h6 class="fw-normal mb-1 pb-1" style="letter-spacing: 1px;">Username <span style="color:red;">*</span></h6>
+                    <div class="form-outline mb-2">
+                      <input type="text" id="form2Example17" class="form-control form-control-lg" placeholder="" name="username">
                     </div>
+                    {{-- <h6 class="fw-normal mb-1 pb-1" style="letter-spacing: 1px;">Siapakah karakter favorit anda di Hoyoverse? <span style="color:red;">*</span></h6>
+                    <div class="form-outline mb-2">
+                        <input type="text" id="form2Example27" class="form-control form-control-lg" placeholder="(Jawaban Keamanan)" name="recovery_answer">
+                    </div> --}}
                     @if (session()->has('success'))
                         <div class="alert alert-success form-outline mb-4" role="alert">
                             {{session()->get('success')}}
@@ -35,6 +39,7 @@
                     <div class="pt-1 mb-4">
                       <button class="btn btn-dark btn-lg btn-block" type="submit">submit</button>
                     </div>
+                    <a href="{{ route('guest.viewLogin') }}" class="btn btn-outline-dark" style="float: left;"><</a>
                   </form>
                 </div>
               </div>

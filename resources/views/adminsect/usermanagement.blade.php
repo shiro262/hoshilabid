@@ -1,8 +1,8 @@
 @section('title', 'User Management')
-@extends('template.masteradmin')
+@extends('template.masteradminhome')
 @section('content')
 <div class="card text-center" style="background:black;">
-    <img src="{{asset('storage/image/wp.jpg')}}" style="opacity: 0.3;">
+    <img src="{{asset('storage/image/wp_genshin.jpg')}}" style="opacity: 0.3;">
     <div class="card-img-overlay">
     <br/><br/><br/>
     <div class="container mt-5">
@@ -18,7 +18,6 @@
                     <thead>
                         <th>No</th>
                         <th>Username</th>
-                        <th>Email</th>
                         <th>Role</th>
                         <th>Action</th>
                     </thead>
@@ -27,7 +26,6 @@
                         <tr>
                         <th>{{ $no +1 }}</th>
                         <td>{{ $data->username }}</td>
-                        <td>{{ $data->email }}</td>
                         <td>{{ $data->role }}</td>
                         <td>
                         @if ($data->role =='member')

@@ -1,5 +1,5 @@
 @section('title', 'Edit Profile - '.$profiles->username)
-@extends('template.mastermember')
+@extends('template.mastermemberhome')
 @section('content')
 <div class="card text-left" style="background:black;">
     <img src="{{asset('storage/image/wp.jpg')}}" style="opacity: 0.3;">
@@ -23,7 +23,12 @@
                 <label for="exampleInputEmail1" style="color: white;">Username</label><br/>
                 <input type="text" placeholder="" class="form-control" name="username" value="{{$profiles->username}}">
                 <label for="exampleInputEmail1" style="color: white;">Email</label><br/>
-                <input type="text" placeholder="" class="form-control" name="email" value="{{$profiles->email}}"><br/>
+                <input type="text" placeholder="" class="form-control" name="email" value="{{$profiles->email}}">
+                <br/>
+                <div class="mb-3">
+                    <label for="formFile" class="form-label" style="color: white;">Profile Picture</label>
+                    <input name="profile_picture" class="form-control" type="file" id="formFile" value="{{$profiles->profile_picture}}">
+                  </div>
                 <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
                     Edit
                 </button><br/>

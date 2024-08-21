@@ -1,4 +1,4 @@
-@section('title', 'Character')
+@section('title', 'Character - Genshin Impact | HoshiLab')
 @extends('template.masterguestgenshin')
 @section('content')
 <div class="card text-center" style="background:black;">
@@ -28,13 +28,38 @@
     @else
         <h6 class="fw-normal" style="letter-spacing: 1px; color:white;">
             Daftar karakter yang tersedia di Genshin Impact <br/>
-            Catatan: Asumsikan semua karakter bintang 4 berada dalam kondisi C6 <br/><br/><br/>
+            Terakhir Update: 03/06/2024<br/><br/>
         </h6>
+        <a class="btn btn-transparent" href="{{ route('Guest Character Genshin Page') }}" role="button">
+            <img class="card-img-top" src="{{asset('storage/image/element_genshin/All.png')}}" style="width: 2rem;" alt="Card image cap">
+        </a>
+        <a class="btn btn-transparent" href="{{ route('Guest Character Anemo Genshin Page') }}" role="button">
+            <img class="card-img-top" src="{{asset('storage/image/element_genshin/Anemo.png')}}" style="width: 2rem;" alt="Card image cap">
+        </a>
+        <a class="btn btn-transparent" href="{{ route('Guest Character Cryo Genshin Page') }}" role="button">
+            <img class="card-img-top" src="{{asset('storage/image/element_genshin/Cryo.png')}}" style="width: 2rem;" alt="Card image cap">
+        </a>
+        <a class="btn btn-transparent" href="{{ route('Guest Character Dendro Genshin Page') }}" role="button">
+            <img class="card-img-top" src="{{asset('storage/image/element_genshin/Dendro.png')}}" style="width: 2rem;" alt="Card image cap">
+        </a>
+        <a class="btn btn-transparent" href="{{ route('Guest Character Electro Genshin Page') }}" role="button">
+            <img class="card-img-top" src="{{asset('storage/image/element_genshin/Electro.png')}}" style="width: 2rem;" alt="Card image cap">
+        </a>
+        <a class="btn btn-transparent" href="{{ route('Guest Character Geo Genshin Page') }}" role="button">
+            <img class="card-img-top" src="{{asset('storage/image/element_genshin/Geo.png')}}" style="width: 2rem;" alt="Card image cap">
+        </a>
+        <a class="btn btn-transparent" href="{{ route('Guest Character Hydro Genshin Page') }}" role="button">
+            <img class="card-img-top" src="{{asset('storage/image/element_genshin/Hydro.png')}}" style="width: 2rem;" alt="Card image cap">
+        </a>
+        <a class="btn btn-transparent" href="{{ route('Guest Character Pyro Genshin Page') }}" role="button">
+            <img class="card-img-top" src="{{asset('storage/image/element_genshin/Pyro.png')}}" style="width: 2rem;" alt="Card image cap">
+        </a>
+        <br/><br/>
     @endif
     <br/>
     <div class="row row-cols-3 justify-content-md-center">
     @foreach($chara as $c)
-    <div class="card-transparent" style="width: 18rem;">
+    <div class="card-transparent" style="width: 19rem;">
         <a href="{{ route('View Character Genshin Guest', [$c->id]) }}">
             <img class="card-img-top" src="{{asset('storage/characterimagegenshin/'.$c->image)}}" height="240" alt="Card image cap">
         </a>

@@ -1,0 +1,21 @@
+language: php
+
+php:
+  - 8.0
+  - 7.4
+  - 7.3
+  - 7.2
+
+env:
+  matrix:
+    - COMPOSER_FLAGS="--prefer-lowest"
+    - COMPOSER_FLAGS=""
+
+before_install:
+  - travis_retry composer self-update
+
+install:
+  - travis_retry composer update --prefer-source $PREFER_LOWEST
+
+script:
+  - phpunit

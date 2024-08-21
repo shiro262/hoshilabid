@@ -16,9 +16,8 @@ return new class extends Migration
         Schema::create('news_genshins', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->string('description');
-            $table->longText('detail');
-            $table->string('image');
+            $table->longText('description');
+            $table->string('date');
             $table->string('banner');
             $table->timestamps();
         });

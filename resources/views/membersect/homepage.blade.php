@@ -1,5 +1,5 @@
-@section('title', 'Homepage')
-@extends('template.mastermember')
+@section('title', 'Hoyoverse Fan Wiki & Community Forum | HoshiLab')
+@extends('template.mastermemberhome')
 @section('content')
 <div class="card text-center" style="background:black;">
     <video muted autoplay loop>
@@ -8,10 +8,10 @@
     <div class="card-img-overlay">
     <br/><br/><br/><br/><br/><br/>
       <h1 class="card-title" style="color:white; font-family:Brush Script Std; font-size: 45px;">
-      HoshiLab.id - Hoyoverse fan wiki & tier list
+      HoshiLab - Hoyoverse fan wiki & tier list
       </h1>
       <p class="card-text" style="color:White;" >
-      HoshiLab.id adalah sebuah wiki untuk game Hoyoverse. Lihat daftar tier dan ulasan kami untuk karakter!<br/>
+      HoshiLab adalah sebuah wiki untuk game Hoyoverse. Lihat daftar tier dan ulasan kami untuk karakter!<br/>
       Lihat juga forum komunitas kami!<br/><br/>
       Pilih Game:
       </p>
@@ -36,7 +36,7 @@
           </div>
         </div>
         <div class="card-transparent" style="width: 20rem;">
-          <a href={{ route('Member Home Star Rail') }}>
+          <a href={{ route('Member Home Honkai Star Rail') }}>
               <img class="card-img-top" src="{{asset('storage/image/starrail.jpg')}}" alt="Card image cap">
           </a>
           <div class="card-body">

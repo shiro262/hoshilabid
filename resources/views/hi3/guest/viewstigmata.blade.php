@@ -1,37 +1,41 @@
-@section('title', $stigmata->name)
+@section('title', $stigmata->name. ' - Honkai Impact 3rd | HoshiLab')
 @extends('template.masterguest')
 @section('content')
-
 <div class="card text-center" style="background:black;">
     <img src="{{asset('storage/image/wp.jpg')}}" style="opacity: 0.4;">
     <div class="card-img-overlay">
-    <br/><br/>
-    <section class="vh-10">
-    <div class="container py-5 h-100">
-      <div class="row d-flex justify-content-center align-items-center h-100">
-        <div class="col col-xl-10">
-          <div class="card-transparent" style="border-radius: 1rem;">
-            <div class="row g-0">
-              <div class="col-md-6 col-lg-5 d-none d-md-block">
-                <img src="{{asset('storage/stigmataimage/'.$stigmata->image)}}"
-                  alt="login form" class="img-fluid" style="border-radius: 1rem 0 0 1rem;" />
-              </div>
-              <div class="col-md-6 col-lg-7 d-flex align-items-center">
-                <div class="card-body p-4 p-lg-5 text-black">
-                    <div class="d-flex align-items-center mb-3 pb-1">
-                      <span class="h1 fw-bold mb-0" style="color:White;">{{$stigmata->name}}</span>
-                    </div>
-                    <hr>
-                    <h4 class="fw-normal mb-1 pb-1" style="letter-spacing: 1px; text-align:left; color:White;">{{$stigmata->detail}}</h4>
-                    <h4 class="fw-normal mb-1 pb-1" style="letter-spacing: 1px; text-align:left; color:White;">Source: {{$stigmata->source}}</h4>
-                    <br/><a href="{{ url()->previous() }}" class="btn btn-outline-light" style="float: left;"><</a>
-                </div>
-              </div>
+    <br/><br/><br/><br/>
+    <a href="{{ url()->previous() }}" class="btn btn-outline-light" style="float: center;"><</a><br/><br/>
+    <div class="col d-flex justify-content-center">
+        <div class="card-transparent w-50 p-3" style="border:1px solid white;">
+            <h1 class="card-title" style="color:white; text-align:left; font-family:Brush Script Std; font-size: 40px;">
+                {{$stigmata->name}}
+            </h1>
+            <h6 style="color:white; text-align:left; font-family:Brush Script Std;">
+                Stigmata set
+            </h6>
+            <hr style="height:10px; border-width:5px; color:white;">
+            <img src="{{asset('storage/stigmataimage/'.$stigmata->image)}}" style="width: 25rem;">
+            <div class="card-body" style="color:White; text-align:justify;">
+                <p class="card-text">
+                    ▣ Set Bonus<br/>
+                    <hr style="height:10px; border-width:5px; color:white;">
+                        <?php
+                            $val = $stigmata->detail;
+                            echo nl2br($val);
+                        ?>
+                    <br/><br/>
+                    ▣ Drop<br/>
+                    <hr style="height:10px; border-width:5px; color:white;">
+                        <?php
+                            $val = $stigmata->source;
+                            echo nl2br($val);
+                        ?>
+                    <br/>
+                </p>
             </div>
-          </div>
         </div>
-      </div>
     </div>
-    </section>
+    <br/>
 </div>
 @endsection

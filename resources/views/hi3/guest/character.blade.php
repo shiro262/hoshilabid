@@ -1,4 +1,4 @@
-@section('title', 'Character')
+@section('title', 'Character - Honkai Impact 3rd | HoshiLab')
 @extends('template.masterguest')
 @section('content')
 <div class="card text-center" style="background:black;">
@@ -27,8 +27,31 @@
         </h5>
     @else
         <h6 class="fw-normal" style="letter-spacing: 1px; color:white;">
-            Daftar karakter yang tersedia di Honkai Impact 3rd
+            Daftar karakter yang tersedia di Honkai Impact 3rd<br/>
+            Terakhir Update: 03/06/2024<br/><br/>
         </h6>
+        <a class="btn btn-transparent" href="{{ route('Guest Character Page') }}" role="button">
+            <img class="card-img-top" src="{{asset('storage/image/type_honkai/All2.png')}}" style="width: 3rem; margin-top:4px;" alt="Card image cap">
+        </a>
+        <a class="btn btn-transparent" href="{{ route('Guest Character BIO Page') }}" role="button">
+            <img class="card-img-top" src="{{asset('storage/image/type_honkai/BIO.png')}}" style="width: 2rem;" alt="Card image cap">
+        </a>
+        <a class="btn btn-transparent" href="{{ route('Guest Character IMG Page') }}" role="button">
+            <img class="card-img-top" src="{{asset('storage/image/type_honkai/IMG.png')}}" style="width: 2rem;" alt="Card image cap">
+        </a>
+        <a class="btn btn-transparent" href="{{ route('Guest Character MECH Page') }}" role="button">
+            <img class="card-img-top" src="{{asset('storage/image/type_honkai/MECH.png')}}" style="width: 2rem;" alt="Card image cap">
+        </a>
+        <a class="btn btn-transparent" href="{{ route('Guest Character PSY Page') }}" role="button">
+            <img class="card-img-top" src="{{asset('storage/image/type_honkai/PSY.png')}}" style="width: 2rem;" alt="Card image cap">
+        </a>
+        <a class="btn btn-transparent" href="{{ route('Guest Character QUA Page') }}" role="button">
+            <img class="card-img-top" src="{{asset('storage/image/type_honkai/QUA.png')}}" style="width: 2rem;" alt="Card image cap">
+        </a>
+        <a class="btn btn-transparent" href="{{ route('Guest Character SD Page') }}" role="button">
+            <img class="card-img-top" src="{{asset('storage/image/type_honkai/SD.png')}}" style="width: 3rem; margin-top:6px;" alt="Card image cap">
+        </a>
+        <br/><br/>
     @endif
     <br/>
     <div class="row row-cols-3 justify-content-md-center">

@@ -1,4 +1,4 @@
-@section('title','Welcome!')
+@section('title','Hoyoverse Fan Wiki & Community Forum | HoshiLab')
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,8 +15,8 @@
 <nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-3">
     <div class="container">
         <a class="navbar-brand" href="#" >
-          <img src="{{asset('storage/image/logo.png')}}"  height="50" alt="">
-          <span style="color:white; font-family:Brush Script Std; font-size: 30px;">HoshiLab.id</span>
+            <img src="{{asset('storage/image/logo.png')}}"  style="margin-bottom:15px;" height="60" alt="">
+          <span style="color:white; font-family:Brush Script Std; font-size: 30px;">HoshiLab</span>
         </a>
     <a href="/login" class="btn btn-outline-dark" style="color:white;">Login</a>
   </div>

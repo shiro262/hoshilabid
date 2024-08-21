@@ -1,4 +1,4 @@
-@section('title', 'Guide')
+@section('title', 'Guide - Honkai Impact 3rd | HoshiLab')
 @extends('template.mastermember')
 @section('content')
 <div class="card text-center" style="background:black;">
@@ -12,50 +12,106 @@
     <h2 style="color:white;text-align:left;">
         Beginner Guide
     </h2>
-    <hr style="height:10px; border-width:10px; color:blue;">
+    <hr style="height:10px; border-width:10px; color:white;">
     <div class="row row-cols-3">
-    @foreach($beginner as $gd)
-    <div class="card-transparent" style="width: 30rem;">
-        <a href="{{ route('View Guide Member', [$gd->id]) }}">
-            <img class="card-img-top" src="{{asset('storage/guideimage/'.$gd->banner)}}" alt="Card image cap">
-        </a>
-        <div class="card-body">
-          <h5 class="card-title" style="color:White;">{{ $gd->title }}</h5>
+        <div class="card-transparent" style="width: 30rem;">
+            <a href="{{ route('Member Begginner Guide View') }}">
+                <img class="card-img-top" src="{{asset('storage/guidehonkaiimage/beginner.png')}}" alt="Card image cap">
+            </a>
+            <div class="card-body">
+                <h5 class="card-title" style="color:White;">Beginner Guide</h5>
+            </div>
         </div>
-      </div>
-    @endforeach
     </div>
     <h2 style="color:white;text-align:left;">
         General Guide
     </h2>
-    <hr style="height:10px; border-width:10px; color:blue;">
+    <hr style="height:10px; border-width:10px; color:white;">
     <div class="row row-cols-3">
-    @foreach($general as $gn)
-    <div class="card-transparent" style="width: 30rem;">
-        <a href="{{ route('View Guide Member', [$gn->id]) }}">
-            <img class="card-img-top" src="{{asset('storage/guideimage/'.$gn->banner)}}" alt="Card image cap">
-        </a>
-        <div class="card-body">
-          <h5 class="card-title" style="color:White;">{{ $gn->title }}</h5>
+        <div class="card-transparent" style="width: 30rem;">
+            <a href="{{ route('Member Combat Guide Honkai Impact View') }}">
+                <img class="card-img-top" src="{{asset('storage/guidehonkaiimage/combat_thumb.jpg')}}" alt="Card image cap">
+            </a>
+            <div class="card-body">
+                <h5 class="card-title" style="color:White;">Combat Guide</h5>
+            </div>
         </div>
-      </div>
-    @endforeach
+        <div class="card-transparent" style="width: 30rem;">
+            <a href="{{ route('Member Crystals Guide View') }}">
+                <img class="card-img-top" src="{{asset('storage/guidehonkaiimage/crystalthumbnail.jpg')}}" alt="Card image cap">
+            </a>
+            <div class="card-body">
+                <h5 class="card-title" style="color:White;">Crystals Guide</h5>
+            </div>
+        </div>
+        <div class="card-transparent" style="width: 30rem;">
+            <a href="{{ route('Member Foundry Guide View') }}">
+                <img class="card-img-top" src="{{asset('storage/guidehonkaiimage/foundy_thumb.jpg')}}" alt="Card image cap">
+            </a>
+            <div class="card-body">
+                <h5 class="card-title" style="color:White;">Foundry Guide</h5>
+            </div>
+        </div>
+        <div class="card-transparent" style="width: 30rem;">
+            <a href="{{ route('Member Energy Guide View') }}">
+                <img class="card-img-top" src="{{asset('storage/guidehonkaiimage/staminathumbnail.jpg')}}" alt="Card image cap">
+            </a>
+            <div class="card-body">
+                <h5 class="card-title" style="color:White;">Energy Guide</h5>
+            </div>
+        </div>
+        <div class="card-transparent" style="width: 30rem;">
+            <a href="{{ route('Member Shops Guide View') }}">
+                <img class="card-img-top" src="{{asset('storage/guidehonkaiimage/shop_thumb.png')}}" alt="Card image cap">
+            </a>
+            <div class="card-body">
+                <h5 class="card-title" style="color:White;">Shops Guide</h5>
+            </div>
+        </div>
+        <div class="card-transparent" style="width: 30rem;">
+            <a href="{{ route('Member Teams Guide View') }}">
+                <img class="card-img-top" src="{{asset('storage/guidehonkaiimage/team_thumb.png')}}" alt="Card image cap">
+            </a>
+            <div class="card-body">
+                <h5 class="card-title" style="color:White;">Teams Guide</h5>
+            </div>
+        </div>
     </div>
     <h2 style="color:white;text-align:left;">
         Gacha Guide
     </h2>
-    <hr style="height:10px; border-width:10px; color:blue;">
+    <hr style="height:10px; border-width:10px; color:white;">
     <div class="row row-cols-3">
-    @foreach($gacha as $gc)
-    <div class="card-transparent" style="width: 30rem;">
-        <a href="{{ route('View Guide Member', [$gc->id]) }}">
-            <img class="card-img-top" src="{{asset('storage/guideimage/'.$gc->banner)}}" alt="Card image cap">
-        </a>
-        <div class="card-body">
-          <h5 class="card-title" style="color:White;">{{ $gc->title }}</h5>
+        <div class="card-transparent" style="width: 30rem;">
+            <a href="{{ route('Member Gacha Guide Honkai Impact View') }}">
+                <img class="card-img-top" src="{{asset('storage/guidehonkaiimage/gachathumbnail.jpg')}}" alt="Card image cap">
+            </a>
+            <div class="card-body">
+                <h5 class="card-title" style="color:White;">Gacha Guide</h5>
+            </div>
         </div>
-      </div>
-    @endforeach
+    </div>
+    <h2 style="color:white;text-align:left;">
+        Game Mode
+    </h2>
+    <hr style="height:10px; border-width:10px; color:white;">
+    <div class="row row-cols-3">
+        <div class="card-transparent" style="width: 30rem;">
+            <a href="{{ route('Member Elysian Guide View') }}">
+                <img class="card-img-top" src="{{asset('storage/guidehonkaiimage/elysian_realm_thum.png')}}" alt="Card image cap">
+            </a>
+            <div class="card-body">
+                <h5 class="card-title" style="color:White;">Elysian Realm Guide</h5>
+            </div>
+        </div>
+        <div class="card-transparent" style="width: 30rem;">
+            <a href="{{ route('Member Realms Guide View') }}">
+                <img class="card-img-top" src="{{asset('storage/guidehonkaiimage/realmofbattlethumbnail.jpeg')}}" alt="Card image cap">
+            </a>
+            <div class="card-body">
+                <h5 class="card-title" style="color:White;">Realms of Battle Guide</h5>
+            </div>
+        </div>
     </div>
 </div>
 @endsection

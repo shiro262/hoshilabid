@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('comment_genshins', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('posthi3_id');
+            $table->foreignId('post_genshin_id');
             $table->longText('detail');
             $table->foreignId('user_id');
             $table->timestamps();

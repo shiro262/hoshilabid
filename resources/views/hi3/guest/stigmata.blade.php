@@ -1,4 +1,4 @@
-@section('title', 'Stigmata')
+@section('title', 'Stigmata - Honkai Impact 3rd | HoshiLab')
 @extends('template.masterguest')
 @section('content')
 <div class="card text-center" style="background:black;">
@@ -27,21 +27,43 @@
         </h5>
     @else
         <h6 class="fw-normal" style="letter-spacing: 1px; color:white;">
-            Daftar Stigmata yang tersedia di Honkai Impact 3rd
+            Daftar Stigmata yang tersedia di Honkai Impact 3rd<br/>
+            Terakhir Update: 03/06/2024
         </h6>
     @endif
     <br/>
-    <div class="row row-cols-3 justify-content-md-center">
-    @foreach($stigmata as $stig)
-    <div class="card-transparent" style="width: 18rem;">
-        <a href="{{ route('View Stigmata Guest', [$stig->id]) }}">
-            <img class="card-img-top" src="{{asset('storage/stigmataimage/'.$stig->image)}}" height="240" alt="Card image cap">
-        </a>
-        <div class="card-body">
-          <p class="card-text" style="color:White;" >{{ $stig->name }}</p>
-        </div>
-      </div>
-    @endforeach
+    <div class="col d-flex justify-content-center">
+        <table class="table w-50 p-3" style="border:1px solid white;">
+            <thead class="thead-dark">
+              <tr style="color: white; text-align: left;">
+                <th scope="col">Stigmata</th>
+                <th scope="col"></th>
+                <th scope="col">Set Bonus & Stats</th>
+              </tr>
+            </thead>
+            <tbody>
+            @foreach ($stigmata as $stg)
+              <tr style="color: white; text-align: left;">
+                <td>
+                    <a href="{{ route('View Stigmata Guest', [$stg->id]) }}">
+                        <img src="{{asset('storage/stigmataimage/'.$stg->image)}}" style="width: 7rem; margin-top:10px;" alt="Card image cap">
+                    </a>
+                </td>
+                <td>
+                    <br/>
+                    {{ $stg->name }}
+                </td>
+                <td>
+                    <?php
+                        $val = $stg->detail;
+                        echo nl2br($val);
+                    ?>
+                </td>
+              </tr>
+            @endforeach
+            </tbody>
+          </table>
+    </div>
 </div>
 <div class="d-flex justify-content-center" style="margin: 2rem">
     {{$stigmata->links()}}

@@ -17,7 +17,7 @@ class UserController extends Controller
     {
         $user = User::find($id);
         $user->delete();
-        Alert::success('Congrats', 'User has been delete!');
+        Alert::success('Selamat', 'User berhasil dihapus!');
         return redirect()->back();
     }
 }

@@ -8,4 +8,16 @@ use Illuminate\Database\Eloquent\Model;
 class PostGenshin extends Model
 {
     use HasFactory;
+    // Each post belongs to one user
+    public function post(){
+        return $this->belongsTo(User::class, foreignKey:'user_id', ownerKey:'id');
+    }
+
+    public function comment(){
+        return $this->hasMany(CommentGenshin::class);
+    }
+
+    public function report(){
+        return $this->hasMany(ReportGenshin::class);
+    }
 }

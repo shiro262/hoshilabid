@@ -17,14 +17,15 @@ class RegisterController extends Controller
     {
         $validatedData = $request->validate([
             'username' => 'required|unique:users|min:5|max:20',
-            'email' => 'required|unique:users',
+            'email' => 'nullable',
+            'recovery_answer' => 'required',
             'password' => 'required|min:5|max:20',
-            'confirm_password' => 'required|min:5|max:20|same:password'
+            'confirm_password' => 'required|min:5|max:20|same:password',
         ]);
 
         $validatedData['password'] = Hash::make($validatedData['password']);
 
         User::create($validatedData);
-        return redirect('/login')->with('success', 'Registration Succesfull! Please Login');
+        return redirect('/login')->with('success', 'Registrasi Sukses! Silahkan Login');
     }
 }

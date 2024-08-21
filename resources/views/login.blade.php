@@ -18,19 +18,19 @@
                         <div class="d-flex align-items-center mb-3 pb-1">
                           <span class="h1 fw-bold mb-0">SIGN IN</span>
                         </div>
-                        <h6 class="fw-normal mb-1 pb-1" style="letter-spacing: 1px;">Email <span style="color:red;">*</span></h6>
+                        <h6 class="fw-normal mb-1 pb-1" style="letter-spacing: 1px;">Username <span style="color:red;">*</span></h6>
                         <div class="form-outline mb-4">
-                          <input type="email" id="form2Example17" class="form-control form-control-lg" placeholder="" name="email"
+                          <input type="username" id="form2Example17" class="form-control form-control-lg" placeholder="" name="username"
                           value="{{Cookie::get('last_logged') ? Cookie::get('last_logged') : ''}}"/>
                         </div>
                         <h6 class="fw-normal mb-1 pb-1" style="letter-spacing: 1px;">Password <span style="color:red;">*</span></h6>
                         <div class="form-outline mb-2">
-                          <input type="password" id="form2Example27" class="form-control form-control-lg" placeholder="5-20 characters" name="password"/>
+                          <input type="password" id="form2Example27" class="form-control form-control-lg" placeholder="5-20 karakter" name="password"/>
                         </div>
-                        <h6 class="fw-normal mb-1 pb-3" style="letter-spacing: 1px;"><a href="/forgotpassword">Forgot Password?</a></h6>
+                        <h6 class="fw-normal mb-1 pb-3" style="letter-spacing: 1px;"><a href="/forgotpassword">Lupa Password?</a></h6>
                         <div class="form-outline pl-4 mb-4">
                             <input type="checkbox" class="form-check-input" id="exampleCheck1" name="remember">
-                            <label class="form-check-label" for="exampleCheck1">Remember me</label>
+                            <label class="form-check-label" for="exampleCheck1">Ingat Saya</label>
                         </div>
                         @if (session()->has('success'))
                             <div class="alert alert-success form-outline mb-4" role="alert">
@@ -45,8 +45,8 @@
                         <div class="pt-1 mb-4">
                           <button class="btn btn-dark btn-lg btn-block" type="submit">sign in</button>
                         </div>
-                        <h6 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Not Registered yet? <a href="/register">Register here</a></h6>
-                        <a href="{{ route('Guest Home Honkai Impact') }}" class="btn btn-outline-dark" style="float: left;"><</a>
+                        <h6 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Belum Punya Akun? <a href="/register">Daftar disini</a></h6>
+                        <a href="{{ route('Landing') }}" class="btn btn-outline-dark" style="float: left;"><</a>
                       </form>
                     </div>
                   </div>

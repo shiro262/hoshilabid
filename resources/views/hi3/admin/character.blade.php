@@ -1,19 +1,19 @@
-@section('title', 'Character')
+@section('title', 'Character - Honkai Impact 3rd | HoshiLab')
 @extends('template.masteradmin')
 @section('content')
 <div class="card text-center" style="background:black;">
-    <img src="{{asset('storage/image/wp.jpg')}}" style="opacity: 0.3;">
+    <img src="{{asset('storage/image/wp.jpg')}}" style="opacity: 0.4;">
     <div class="card-img-overlay">
     <br/><br/><br/>
     <nav class="navbar navbar-expand-lg">
         <div class="container">
-              <form class="d-flex my-2 my-lg-0" action="{{ route('Search Character Admin') }}">
+              <form class="d-flex my-2 my-lg-0" action="{{ route('Search Character admin') }}">
                 @if(isset($query))
-                    <input name="search" class="form-control me-2" type="search" placeholder="Search" value="{{$query}}">
+                    <input name="search" class="form-control me-2" type="search" placeholder="Cari disini" value="{{$query}}">
                 @else
-                    <input name="search" class="form-control me-2" type="search" placeholder="Search">
+                    <input name="search" class="form-control me-2" type="search" placeholder="Cari disini">
                 @endif
-                  <button class="btn btn-outline-success" type="submit">Search</button>
+                  <button class="btn btn-outline-success" type="submit">Cari</button>
               </form>
           </ul>
         </div>
@@ -23,33 +23,50 @@
     </h1>
     @if(isset($query))
         <h5 class="fw-normal" style="letter-spacing: 1px; color:white;">
-            Showing result of "{{$query}}"
+            Menunjukkan hasil pencarian dari "{{$query}}"
         </h5>
     @else
         <h6 class="fw-normal" style="letter-spacing: 1px; color:white;">
-            List of characters available Honkai Impact 3rd
+            Daftar karakter yang tersedia di Honkai Impact 3rd<br/>
+            Terakhir Update: 03/06/2024<br/><br/>
         </h6>
+        <a class="btn btn-transparent" href="{{ route('admin Character Page') }}" role="button">
+            <img class="card-img-top" src="{{asset('storage/image/type_honkai/All2.png')}}" style="width: 3rem; margin-top:4px;" alt="Card image cap">
+        </a>
+        <a class="btn btn-transparent" href="{{ route('admin Character BIO Page') }}" role="button">
+            <img class="card-img-top" src="{{asset('storage/image/type_honkai/BIO.png')}}" style="width: 2rem;" alt="Card image cap">
+        </a>
+        <a class="btn btn-transparent" href="{{ route('admin Character IMG Page') }}" role="button">
+            <img class="card-img-top" src="{{asset('storage/image/type_honkai/IMG.png')}}" style="width: 2rem;" alt="Card image cap">
+        </a>
+        <a class="btn btn-transparent" href="{{ route('admin Character MECH Page') }}" role="button">
+            <img class="card-img-top" src="{{asset('storage/image/type_honkai/MECH.png')}}" style="width: 2rem;" alt="Card image cap">
+        </a>
+        <a class="btn btn-transparent" href="{{ route('admin Character PSY Page') }}" role="button">
+            <img class="card-img-top" src="{{asset('storage/image/type_honkai/PSY.png')}}" style="width: 2rem;" alt="Card image cap">
+        </a>
+        <a class="btn btn-transparent" href="{{ route('admin Character QUA Page') }}" role="button">
+            <img class="card-img-top" src="{{asset('storage/image/type_honkai/QUA.png')}}" style="width: 2rem;" alt="Card image cap">
+        </a>
+        <a class="btn btn-transparent" href="{{ route('admin Character SD Page') }}" role="button">
+            <img class="card-img-top" src="{{asset('storage/image/type_honkai/SD.png')}}" style="width: 3rem; margin-top:6px;" alt="Card image cap">
+        </a>
+        <br/><br/>
     @endif
-    <h6 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px; color:white;">
-        Add another character <a href={{route('View Add Character')}}>here</a></h6>
-    @if (session()->has('success'))
-        <div class="alert alert-success form-outline mb-4" role="alert">
-            {{session()->get('success')}}
-        </div>
-    @endif
+    <br/>
     <div class="row row-cols-3 justify-content-md-center">
     @foreach($chara as $c)
     <div class="card-transparent" style="width: 18rem;">
-        <a href="{{ route('View Character Admin', [$c->id]) }}">
+        <a href="{{ route('View Character admin', [$c->id]) }}">
             <img class="card-img-top" src="{{asset('storage/chara/'.$c->image)}}" height="240" alt="Card image cap">
         </a>
         <div class="card-body">
-          <p class="card-text" style="color:White;" >{{ $c->name }}</p>
+          <p class="card-text" style="color:White;" >{{ $c->name }}<br/>{{$c->role}}</p>
         </div>
       </div>
     @endforeach
 </div>
-<div class="d-flex justify-content-center" style="margin: 1rem">
+<div class="d-flex justify-content-center" style="margin: 2rem">
     {{$chara->links()}}
 </div>
 </div>

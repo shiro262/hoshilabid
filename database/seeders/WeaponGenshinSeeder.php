@@ -2264,7 +2264,7 @@ class WeaponGenshinSeeder extends Seeder
                 "Base ATK (Lv.1-90): 46 - 608
                 2nd Stat (Lv.1-90): 14.4% -66.2% CRIT DMG",
                 'source' => "Weapon Event Wishes",
-                'image' => "The First Great Magic",
+                'image' => "The First Great Magic.png",
                 'created_at' => now(),
                 'updated_at' => now(),
             ],

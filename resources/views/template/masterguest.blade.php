@@ -14,7 +14,7 @@
 <nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-3">
     <div class="container">
         <a class="navbar-brand" href="/" >
-            <img src="{{asset('storage/image/logo.png')}}"  height="50" alt="">
+            <img src="{{asset('storage/image/logo.png')}}"  style="margin-bottom:15px;" height="60" alt="">
             <span style="color:white; font-family:Brush Script Std; font-size: 30px;">HoshiLab</span>
         </a>
         <ul class="navbar-nav me-auto">
@@ -40,7 +40,7 @@
                 <a class="nav-link active" href={{ route('Guest News Page') }}>News</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link active" href={{ route('Member Blog Page') }}>Forum</a>
+                <a class="nav-link active" href={{ route('Member Honkai Forum Page') }}>Forum</a>
             </li>
         </ul>
         <a href="/login" class="btn btn-outline-dark" style="color:white;">Login</a>

@@ -22,19 +22,32 @@ class ProfileController extends Controller
     {
         $profiles = User::find($id);
 
-        return view('membersect..updateprofile', compact('profiles'));
+        return view('membersect.updateprofile', compact('profiles'));
     }
     public function updateprofilemember(Request $request)
     {
         $request->validate([
-            'username' => 'required|min:5|max:20|unique:users',
-            'email' => 'required|email|unique:users'
+            'username' => 'required|min:5|max:20',
+            'email' => 'nullable|email',
+            'profile_picture' => 'nullable|mimes:png,jpg,jpeg'
         ]);
+        if($request->hasFile('profile_picture')){
+            $file = $request->file('profile_picture');
+            $extension = $file->getClientOriginalExtension();
+            $filename = time().'.'.$extension;
+            $file->move('storage/profilepic', $filename);
 
-        $up = User::find(Auth::user()->id);
-        $up->username = $request['username'];
-        $up->email = $request['email'];
-        $up->update();
+            $up = User::find(Auth::user()->id);
+            $up->username = $request['username'];
+            $up->email = $request['email'];
+            $up->profile_picture = $filename;
+            $up->update();
+        }else{
+            $up = User::find(Auth::user()->id);
+            $up->username = $request['username'];
+            $up->email = $request['email'];
+            $up->update();
+        }
         Alert::success('Congrats', 'Profile Change Success!');
         return redirect('member/profile');
     }
@@ -73,14 +86,28 @@ class ProfileController extends Controller
     public function updateprofileadmin(Request $request)
     {
         $request->validate([
-            'username' => 'required|min:5|max:20|unique:users',
-            'email' => 'required|email|unique:users'
+            'username' => 'required|min:5|max:20',
+            'email' => 'nullable|email',
+            'profile_picture' => 'nullable|mimes:png,jpg,jpeg'
         ]);
 
-        $up = User::find(Auth::user()->id);
-        $up->username = $request['username'];
-        $up->email = $request['email'];
-        $up->update();
+        if($request->hasFile('profile_picture')){
+            $file = $request->file('profile_picture');
+            $extension = $file->getClientOriginalExtension();
+            $filename = time().'.'.$extension;
+            $file->move('storage/profilepic', $filename);
+
+            $up = User::find(Auth::user()->id);
+            $up->username = $request['username'];
+            $up->email = $request['email'];
+            $up->profile_picture = $filename;
+            $up->update();
+        }else{
+            $up = User::find(Auth::user()->id);
+            $up->username = $request['username'];
+            $up->email = $request['email'];
+            $up->update();
+        }
         Alert::success('Congrats', 'Profile Change Success!');
         return redirect('admin/profile');
     }

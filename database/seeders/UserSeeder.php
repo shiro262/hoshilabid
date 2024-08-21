@@ -18,16 +18,25 @@ class UserSeeder extends Seeder
     {
         DB::table('users')->insert([
             'username'=>'admin',
-            'email'=>'admin@gmail.com',
-            'password'=>Hash::make('admin123'),
-            'role'=>'admin'
+            'password'=>Hash::make('ilhamisthegod'),
+            'role'=>'admin',
+            'profile_picture' => 'ame.jpg',
+            'recovery_answer'=>'Windah Basudara'
         ]);
 
         DB::table('users')->insert([
             'username'=>'user1',
-            'email'=>'user1@gmail.com',
             'password'=>Hash::make('testuser123'),
-            'role'=>'member'
+            'role'=>'member',
+            'recovery_answer'=>'Windah Basudara'
+        ]);
+
+        DB::table('users')->insert([
+            'username'=>'user2',
+            'password'=>Hash::make('testuser321'),
+            'role'=>'member',
+            'profile_picture' => 'rushia2.jpg',
+            'recovery_answer'=>'Windah Basudara'
         ]);
     }
 }

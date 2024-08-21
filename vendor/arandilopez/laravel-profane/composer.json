@@ -1,0 +1,30 @@
+{
+  "name": "arandilopez/laravel-profane",
+  "description": "Laravel Profanity Valitador",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Arandi Lopez",
+      "email": "arandilopez.93@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "LaravelProfane\\": "src/",
+      "LaravelProfaneTests\\": "tests/"
+    }
+  },
+  "minimum-stability": "stable",
+  "require": {
+    "illuminate/support": ">=5.2|^6.0|^7.0|^8.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^8.0|^8.5",
+    "mockery/mockery": "^1.3"
+  },
+  "extra": {
+    "laravel": {
+      "providers": ["LaravelProfane\\ProfaneServiceProvider"]
+    }
+  }
+}

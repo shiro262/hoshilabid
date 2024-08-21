@@ -1,4 +1,4 @@
-@section('title', 'Tier List')
+@section('title', 'Tier List - Honkai Impact 3rd | HoshiLab')
 @extends('template.masterguest')
 @section('content')
 <div class="card text-center" style="background:black;">
@@ -9,10 +9,10 @@
         Character Tier List
     </h1>
     <h6 style="color:white;">
-        by HoshiLab
+        Terakhir Update: 03/06/2024
     </h6>
     <br/>
-    <h2 style="color:white;">
+    <h2 style="color:red;">
         Tier S+
     </h2>
     <br/>
@@ -29,7 +29,7 @@
         @endforeach
     </div>
     <br/>
-    <h2 style="color:white;">
+    <h2 style="color:rgb(199, 35, 35);">
         Tier S
     </h2>
     <br/>
@@ -46,7 +46,7 @@
         @endforeach
     </div>
     <br/>
-    <h2 style="color:white;">
+    <h2 style="color:rgb(205, 142, 16);">
         Tier A
     </h2>
     <br/>
@@ -63,7 +63,7 @@
         @endforeach
     </div>
     <br/>
-    <h2 style="color:white;">
+    <h2 style="color:yellow;">
         Tier B
     </h2>
     <br/>
@@ -80,7 +80,7 @@
         @endforeach
     </div>
     <br/>
-    <h2 style="color:white;">
+    <h2 style="color:green;">
         Tier C
     </h2>
     <br/>

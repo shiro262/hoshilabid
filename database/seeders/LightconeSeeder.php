@@ -1573,16 +1573,70 @@ class LightconeSeeder extends Seeder
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
-
-
-
-
-
-
-
-
-
-
+            [
+                'name' => "Boundless Choreo",
+                'path' => "Nihility",
+                'rarity' => "4star",
+                'detail' =>
+                "Scrutinize
+                Meningkatkan CRIT Rate pemakainya sebesar 8~16%. Pemakainya memberikan 24~48% lebih banyak CRIT DMG kepada musuh yang sedang dalam keadaan Slowed atau mengalami penurunan DEF.",
+                'stats' =>
+                "Base HP (Lv.1-80): 43 - 952
+                Base ATK (Lv.1-80): 21 - 476
+                Base DEF (Lv.1-80): 15 - 330",
+                'source' => "Event Warp",
+                'image' => "Boundless Choreo.png",
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'name' => "Flowing Nightglow",
+                'path' => "Harmony",
+                'rarity' => "5star",
+                'detail' =>
+                "Pacify
+                Setiap kali teman menyerang, pemakainya mendapatkan 1 tumpukan Cantillation. Setiap tumpukan Cantillation meningkatkan Tingkat Regenerasi Energi pemakainya sebesar 3.0~5.0%, ditumpuk hingga 5 kali. Ketika pemakai menggunakan Ultimate mereka, menghapus Cantillation dan mendapatkan Cadenza. Cadenza meningkatkan ATK pemakainya sebesar 48~96% dan meningkatkan DMG sekutu yang terkena sebesar 24~40%, berlangsung selama 1 giliran.",
+                'stats' =>
+                "Base HP (Lv.1-80): 43 - 952
+                Base ATK (Lv.1-80): 28 - 635
+                Base DEF (Lv.1-80): 21 - 463",
+                'source' => "Event Warp",
+                'image' => "Flowing Nightglow.png",
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'name' => "For Tomorrow's Journey",
+                'path' => "Harmony",
+                'rarity' => "4star",
+                'detail' =>
+                "Bonds
+                Meningkatkan ATK pemakainya sebesar 16~32%. Setelah pemakainya menggunakan Ultimate, meningkatkan DMG yang diberikan sebesar 18~30%, berlangsung selama 1 giliran.",
+                'stats' =>
+                "Base HP (Lv.1-80): 43 - 952
+                Base ATK (Lv.1-80): 21 - 476
+                Base DEF (Lv.1-80): 15 - 330",
+                'source' => "Hadiah Event terbatas: Clockie: Dreamjoy Memoir",
+                'image' => "For Tomorrow's Journey.png",
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'name' => "Sailing Towards A Second Life",
+                'path' => "The Hunt",
+                'rarity' => "5star",
+                'detail' =>
+                "Rough Water
+                Meningkatkan Break Effect pemakainya sebesar 60~100%. Break DMG yang diberikan oleh pemakainya mengabaikan 20~32% DEF target. Ketika Break Effect pemakainya dalam pertempuran mencapai 150% atau lebih besar, meningkatkan SPD mereka sebesar 12~20%.",
+                'stats' =>
+                "Base HP (Lv.1-80): 48 - 1,058
+                Base ATK (Lv.1-80): 26 - 582
+                Base DEF (Lv.1-80): 21 - 463",
+                'source' => "Event Warp",
+                'image' => "Sailing Towards A Second Life.png",
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
         ]);
     }
 }

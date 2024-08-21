@@ -1084,6 +1084,50 @@ class CharacterHsrSeeder extends Seeder
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
+            [
+                'name' => "Robin",
+                'path' => "Harmony",
+                'element' => "Physical",
+                'role' => "Support",
+                'detail' => "Penyanyi Halovian yang lahir di Penacony dan meraih ketenaran luar biasa. Seorang wanita muda yang anggun dan rendah hati. Kali ini, ia diundang pulang oleh The Family untuk menyapa semua orang dengan sebuah lagu di Charmony Festival. Dia dapat menggunakan kekuatan Harmoni untuk menyiarkan musiknya, mewujudkan “resonansi” tidak hanya di antara para penggemarnya tetapi juga di antara semua jenis makhluk hidup.
+                \r\nPreferensi Stats: ATK% >= SPD > HP% = DEF%
+                Prioritas Skill: Ultimate > Skill > Talent > Basic",
+                'rarity' => "5star",
+                'tier_moc' => "S",
+                'tier_pf' => "S+",
+                'lightcone_sign_id' => 98,
+                'lightcone_alt1_id' => 99,
+                'lightcone_alt2_id' => 11,
+                'relic_opt1_id' => 2,
+                'relic_opt2_id' => 11,
+                'planar_opt1_id' => 5,
+                'planar_opt2_id' => 12,
+                'image' => "Robin.png",
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'name' => "Boothill",
+                'path' => "The Hunt",
+                'element' => "Physical",
+                'role' => "DPS",
+                'detail' => "Seorang koboi cyborg yang melayang di antara bintang-bintang. Sangat optimis dan tidak terkendali. Dia adalah anggota Galaxy Rangers yang bersumpah untuk menghukum orang jahat dengan cara apa pun.
+                \r\nPreferensi Stats: SPD (Rekomendasi = 145) >= Break Effect
+                Prioritas Skill: Talent > Skill > Ultimate > Basic",
+                'rarity' => "5star",
+                'tier_moc' => "S",
+                'tier_pf' => "C",
+                'lightcone_sign_id' => 100,
+                'lightcone_alt1_id' => 3,
+                'lightcone_alt2_id' => 69,
+                'relic_opt1_id' => 16,
+                'relic_opt2_id' => 18,
+                'planar_opt1_id' => 14,
+                'planar_opt2_id' => 4,
+                'image' => "Boothill.png",
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
         ]);
     }
 }

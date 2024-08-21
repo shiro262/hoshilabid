@@ -1,8 +1,8 @@
-@section('title', 'Character')
+@section('title', 'Character - Honkai: Star Rail | HoshiLab')
 @extends('template.masterguesthsr')
 @section('content')
 <div class="card text-center" style="background:black;">
-    <img src="{{asset('storage/image/wp.jpg')}}" style="opacity: 0.4;">
+    <img src="{{asset('storage/image/wp_hsr.png')}}" style="opacity: 0.4;">
     <div class="card-img-overlay">
     <br/><br/><br/>
     <nav class="navbar navbar-expand-lg">
@@ -27,9 +27,35 @@
         </h5>
     @else
         <h6 class="fw-normal" style="letter-spacing: 1px; color:white;">
-            Daftar karakter yang tersedia di Genshin Impact <br/>
-            Catatan: Asumsikan semua karakter bintang 4 berada dalam kondisi C6 <br/><br/><br/>
+            Daftar karakter yang tersedia di Honkai: Star Rail <br/>
+            Terakhir Update: 03/06/2024<br/>
+            <br/>
         </h6>
+        <a class="btn btn-transparent" href="{{ route('Guest Character Honkai Star Rail Page') }}" role="button">
+            <img class="card-img-top" src="{{asset('storage/image/element_hsr/All.png')}}" style="width: 2rem;" alt="Card image cap">
+        </a>
+        <a class="btn btn-transparent" href="{{ route('Guest Character Fire Honkai Star Rail Page') }}" role="button">
+            <img class="card-img-top" src="{{asset('storage/image/element_hsr/Fire.png')}}" style="width: 2rem;" alt="Card image cap">
+        </a>
+        <a class="btn btn-transparent" href="{{ route('Guest Character Ice Honkai Star Rail Page') }}" role="button">
+            <img class="card-img-top" src="{{asset('storage/image/element_hsr/Ice.png')}}" style="width: 2rem;" alt="Card image cap">
+        </a>
+        <a class="btn btn-transparent" href="{{ route('Guest Character Imaginary Honkai Star Rail Page') }}" role="button">
+            <img class="card-img-top" src="{{asset('storage/image/element_hsr/Imaginary.png')}}" style="width: 2rem;" alt="Card image cap">
+        </a>
+        <a class="btn btn-transparent" href="{{ route('Guest Character Lightning Honkai Star Rail Page') }}" role="button">
+            <img class="card-img-top" src="{{asset('storage/image/element_hsr/Lightning.png')}}" style="width: 2rem;" alt="Card image cap">
+        </a>
+        <a class="btn btn-transparent" href="{{ route('Guest Character Physical Honkai Star Rail Page') }}" role="button">
+            <img class="card-img-top" src="{{asset('storage/image/element_hsr/Physical.png')}}" style="width: 2rem;" alt="Card image cap">
+        </a>
+        <a class="btn btn-transparent" href="{{ route('Guest Character Quantum Honkai Star Rail Page') }}" role="button">
+            <img class="card-img-top" src="{{asset('storage/image/element_hsr/Quantum.png')}}" style="width: 2rem;" alt="Card image cap">
+        </a>
+        <a class="btn btn-transparent" href="{{ route('Guest Character Wind Honkai Star Rail Page') }}" role="button">
+            <img class="card-img-top" src="{{asset('storage/image/element_hsr/Wind.png')}}" style="width: 2rem;" alt="Card image cap">
+        </a>
+        <br/><br/>
     @endif
     <br/>
     <div class="row row-cols-3 justify-content-md-center">

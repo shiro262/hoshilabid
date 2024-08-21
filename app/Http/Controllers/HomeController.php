@@ -28,11 +28,11 @@ class HomeController extends Controller
     }
 
     //member
-    //honkai impact
     public function indexmember()
     {
         return view('membersect.homepage');
     }
+    //honkai impact
     public function indexmemberhonkaiimpact3()
     {
         return view('hi3.member.home');
@@ -47,10 +47,6 @@ class HomeController extends Controller
     {
         return view('gi.member.home');
     }
-    public function aboutusmember()
-    {
-        return view('hi3.member.aboutus');
-    }
 
     //admin
     public function indexadmin()
@@ -61,4 +57,20 @@ class HomeController extends Controller
     {
         return view('hi3.admin.aboutus');
     }
+    //honkai impact
+    public function indexadminhonkaiimpact3()
+    {
+        return view('hi3.admin.home');
+    }
+    //hsr
+    public function indexadminhsr()
+    {
+        return view('hsr.admin.home');
+    }
+    //genshin
+    public function indexadmingenshin()
+    {
+        return view('gi.admin.home');
+    }
+
 }

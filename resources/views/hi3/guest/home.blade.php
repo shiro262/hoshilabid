@@ -1,4 +1,4 @@
-@section('title', 'Home - Honkai Impact 3')
+@section('title', 'Home - Honkai Impact 3rd | HoshiLab')
 @extends('template.masterguest')
 @section('content')
 <div class="card text-center" style="background:black;">
@@ -8,10 +8,10 @@
     <div class="card-img-overlay">
     <br/><br/><br/><br/><br/><br/>
       <h1 class="card-title" style="color:white; font-family:Brush Script Std; font-size: 45px;">
-      HoshiLab.id - Honkai Impact 3rd wiki and tier list
+      HoshiLab - Honkai Impact 3rd wiki and tier list
       </h1>
       <p class="card-text" style="color:White;" >
-        HoshiLab.id adalah sebuah wiki untuk game Hoyoverse. Lihat daftar tier dan ulasan kami untuk karakter!<br/>
+        HoshiLab adalah sebuah wiki untuk game Hoyoverse. Lihat daftar tier dan ulasan kami untuk karakter!<br/>
         Lihat juga forum komunitas kami!
       </p>
       <h1  style="color:white; font-family:Brush Script Std; font-size: 45px;">
@@ -19,10 +19,10 @@
       </h1>
       <div class="row row-cols-3 justify-content-md-center">
         <div class="card-transparent" style="width: 35rem;">
-            <img class="card-img-top" src="{{asset('storage/trailer/Symphony of Truth Banner.png')}}" alt="Card image cap">
-            <div class="card-body">
+            <img class="card-img-top" src="{{asset('storage/trailer/Invitation to the Mad Banquet.png')}}" alt="Card image cap">
+            {{-- <div class="card-body">
                 <img src="{{asset('storage/image/Symphony of Truth Logo.png')}}">
-            </div>
+            </div> --}}
         </div>
       </div>
 </div>
@@ -31,9 +31,9 @@
   <div class="card-img-overlay">
   <br/><br/><br/>
     <h1 class="card-title" style="color:white; font-family:Brush Script Std; font-size: 45px;">
-        HoshiLab.id menyediakan semua yang kamu perlukan!
+        HoshiLab menyediakan semua yang kamu perlukan!
     </h1>
-    <br/><br/><br/>
+    <br/>
     <div class="row row-cols-3 justify-content-md-center">
       <div class="card-transparent" style="width: 20rem;">
         <a href={{ route('Guest Guide Page') }}>
@@ -69,6 +69,15 @@
         <div class="card-body">
             <h5 class="card-title" style="color:white;">News and updates</h5>
           <p class="card-text" style="color:white;">Tetap up to date dengan catatan tambalan, konten baru, atau pembaruan penting lainnya.</p>
+        </div>
+      </div>
+      <div class="card-transparent" style="width: 20rem;">
+        <a href={{ route('Member Honkai Forum Page') }}>
+            <img class="card-img-top" src="{{asset('storage/image/blog.jpg')}}" alt="Card image cap">
+        </a>
+        <div class="card-body">
+            <h5 class="card-title" style="color:white;">Community Forum</h5>
+          <p class="card-text" style="color:white;">Berinteraksi dan bagikan pendapat Anda tentang game ini dengan komunitas HoshiLab!</p>
         </div>
       </div>
     </div>

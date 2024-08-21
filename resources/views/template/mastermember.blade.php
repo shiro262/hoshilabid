@@ -13,13 +13,13 @@
 <body style="background: black;">
 <nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-3">
     <div class="container">
-        <a class="navbar-brand" href="/member/homepage" >
-            <img src="{{asset('storage/image/logo.png')}}"  height="50" alt="">
-            <span style="color:white; font-family:Brush Script Std; font-size: 30px;">HoshiLab.id</span>
+        <a class="navbar-brand" href={{ route('member.viewPage')}} >
+            <img src="{{asset('storage/image/logo.png')}}"  style="margin-bottom:15px;" height="60" alt="">
+            <span style="color:white; font-family:Brush Script Std; font-size: 30px;">HoshiLab</span>
         </a>
         <ul class="navbar-nav me-auto">
             <li class="nav-item">
-                <a class="nav-link active" href={{ route('Member Guide Page') }}>Guide</a>
+                <a class="nav-link active" href={{ route('Member Home Honkai Impact') }}>Home</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link active" href={{ route('Member Character Page') }}>Character</a>
@@ -28,16 +28,25 @@
                 <a class="nav-link active" href={{ route('Member Tier List Page') }}>Tier List</a>
             </li>
             <li class="nav-item">
+                <a class="nav-link active" href={{ route('Member Weapon Page') }}>Weapon</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href={{ route('Member Stigmata Page') }}>Stigmata</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href={{ route('Member Guide Page') }}>Guide</a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link active" href={{ route('Member News Page') }}>News</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link active" href={{ route('Member Blog Page') }}>Blog</a>
+                <a class="nav-link active" href={{ route('Member Honkai Forum Page') }}>Forum</a>
             </li>
         </ul>
         <ul class="navbar-nav ml-auto">
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:white;">
-                  {{Auth::user()->username}}
+                    <img src="{{asset('storage/profilepic/'.Auth::user()->profile_picture)}}" style="width: 2rem;" class="me-1 avatar-sm rounded-circle">
                 </a>
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="{{ route('Member Profile Page') }}">Profile</a></li>

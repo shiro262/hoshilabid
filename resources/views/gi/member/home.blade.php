@@ -1,85 +1,85 @@
-@section('title', 'Home - Genshin Impact')
-@extends('template.mastermember')
+@section('title', 'Home - Genshin Impact | HoshiLab')
+@extends('template.mastermembergenshin')
 @section('content')
 <div class="card text-center" style="background:black;">
     <video muted autoplay loop>
-        <source src="{{asset('storage/trailer/Masquerade of the Guilty.mp4')}}" type="video/mp4"/>
+        <source src="{{asset('storage/trailer/Two Worlds Aflame, the Crimson Night Fades Trailer.mp4')}}" type="video/mp4"/>
     </video>
     <div class="card-img-overlay">
     <br/><br/><br/><br/><br/><br/>
       <h1 class="card-title" style="color:white; font-family:Brush Script Std; font-size: 45px;">
-      HoshiLab.id - Genshin Impact wiki and tier list
+      HoshiLab - Genshin Impact wiki and tier list
       </h1>
       <p class="card-text" style="color:White;" >
-      HoshiLab.id is a wiki for Genshin Impact. Check our tier lists and reviews for characters!<br/>
-      Also checkout our community blog!
+        HoshiLab adalah sebuah wiki untuk game Hoyoverse. Lihat daftar tier dan ulasan kami untuk karakter!<br/>
+        Lihat juga forum komunitas kami!
       </p>
       <h1  style="color:white; font-family:Brush Script Std; font-size: 45px;">
-        Current Event:
+        Event Saat ini:
       </h1>
       <div class="row row-cols-3 justify-content-md-center">
         <div class="card-transparent" style="width: 35rem;">
-            <img class="card-img-top" src="{{asset('storage/trailer/Symphony of Truth Banner.png')}}" alt="Card image cap">
-            <div class="card-body">
+            <img class="card-img-top" src="{{asset('storage/trailer/An Everlasting Dream Intertwined.png')}}" alt="Card image cap">
+            {{-- <div class="card-body">
                 <img src="{{asset('storage/image/Symphony of Truth Logo.png')}}">
-            </div>
+            </div> --}}
         </div>
       </div>
 </div>
 <div class="card text-center" style="background:black;">
-  <img src="{{asset('storage/image/elysia.jpg')}}" style="opacity: 0.4;">
-  <div class="card-img-overlay">
-  <br/><br/><br/>
-    <h1 class="card-title" style="color:white; font-family:Brush Script Std; font-size: 45px;">
-    Tokotoko.id provide everything you need!
-    </h1>
-    <br/><br/><br/>
-    <div class="row row-cols-3 justify-content-md-center">
-      <div class="card-transparent" style="width: 20rem;">
-        <a href={{ route('Member Guide Page') }}>
-            <img class="card-img-top" src="{{asset('storage/image/guide.jpg')}}" alt="Card image cap">
-        </a>
-        <div class="card-body">
-            <h5 class="card-title" style="color:white;">Guides</h5>
-          <p class="card-text" style="color:white;">Knowledge is power and Tokotoko teaches you what to do (or what not to do) in order to gain advantage over other players.</p>
+    <img src="{{asset('storage/image/Furina.jpg')}}" style="opacity: 0.4;">
+    <div class="card-img-overlay">
+    <br/><br/>
+      <h1 class="card-title" style="color:white; font-family:Brush Script Std; font-size: 45px;">
+      HoshiLab menyediakan semua yang kamu perlukan!
+      </h1>
+      <br/>
+      <div class="row row-cols-3 justify-content-md-center">
+        <div class="card-transparent" style="width: 20rem;">
+          <a href={{ route('Member Genshin Guide Page') }}>
+              <img class="card-img-top" src="{{asset('storage/image/Guide_genshin.png')}}" alt="Card image cap">
+          </a>
+          <div class="card-body">
+              <h5 class="card-title" style="color:white;">Guides</h5>
+            <p class="card-text" style="color:white;">Pengetahuan adalah kekuatan dan HoshiLab mengajarkan Anda apa yang harus dilakukan (atau apa yang tidak boleh dilakukan) untuk mendapatkan keuntungan dari pemain lain.</p>
+          </div>
+        </div>
+        <div class="card-transparent" style="width: 20rem;">
+          <a href="{{ route('Member Character Genshin Page') }}">
+              <img class="card-img-top" src="{{asset('storage/image/Character_genshin.jpg')}}" alt="Card image cap">
+          </a>
+          <div class="card-body">
+              <h5 class="card-title" style="color:white;">Characters Review</h5>
+            <p class="card-text" style="color:white;">Game Gacha berkutat pada pengumpulan karakter dan HoshiLab membantu Anda menggunakannya dengan cara yang optimal.</p>
+          </div>
+        </div>
+        <div class="card-transparent" style="width: 20rem;">
+          <a href={{ route('Member Tier List Genshin Page') }}>
+              <img class="card-img-top" src="{{asset('storage/image/Tierlist_genshin.png')}}" alt="Card image cap">
+          </a>
+          <div class="card-body">
+              <h5 class="card-title" style="color:white;">Tier list dan meta analysis</h5>
+            <p class="card-text" style="color:white;">Apakah kamu seorang pengikut meta atau kolektor, memainkan game gacha apa pun tanpa daftar tier yang bagus akan mempersulit segalanya.</p>
+          </div>
+        </div>
+        <div class="card-transparent" style="width: 20rem;">
+          <a href={{ route('Member Genshin News Page') }}>
+              <img class="card-img-top" src="{{asset('storage/image/Newsupdt_genshin.jpg')}}" alt="Card image cap">
+          </a>
+          <div class="card-body">
+              <h5 class="card-title" style="color:white;">News dan updates</h5>
+            <p class="card-text" style="color:white;">Tetap up to date dengan catatan tambalan, konten baru, atau pembaruan penting lainnya.</p>
+          </div>
+        </div>
+        <div class="card-transparent" style="width: 20rem;">
+          <a href={{ route('Member Genshin Forum Page') }}>
+              <img class="card-img-top" src="{{asset('storage/image/Forum_genshin.png')}}" alt="Card image cap">
+          </a>
+          <div class="card-body">
+              <h5 class="card-title" style="color:white;">Community Forum</h5>
+            <p class="card-text" style="color:white;">Berinteraksi dan bagikan pendapat Anda tentang game ini dengan komunitas HoshiLab!</p>
+          </div>
         </div>
       </div>
-      <div class="card-transparent" style="width: 20rem;">
-        <a href="{{ route('Member Character Page') }}">
-            <img class="card-img-top" src="{{asset('storage/image/charareview.jpg')}}" alt="Card image cap">
-        </a>
-        <div class="card-body">
-            <h5 class="card-title" style="color:white;">Characters Review</h5>
-          <p class="card-text" style="color:white;">Gacha games revolve about collecting characters and Tokotoko helps you use them in an optimal way.</p>
-        </div>
-      </div>
-      <div class="card-transparent" style="width: 20rem;">
-        <a href={{ route('Member Tier List Page') }}>
-            <img class="card-img-top" src="{{asset('storage/image/tier list.png')}}" alt="Card image cap">
-        </a>
-        <div class="card-body">
-            <h5 class="card-title" style="color:white;">Tier list and meta analysis</h5>
-          <p class="card-text" style="color:white;">Whether you are a meta slave or a collector, playing any gacha game without a good tier list makes everything harder.</p>
-        </div>
-      </div>
-      <div class="card-transparent" style="width: 20rem;">
-        <a href={{ route('Member News Page') }}>
-            <img class="card-img-top" src="{{asset('storage/image/newsupdate.jpg')}}" alt="Card image cap">
-        </a>
-        <div class="card-body">
-            <h5 class="card-title" style="color:white;">News and updates</h5>
-          <p class="card-text" style="color:white;">Stay up to date with any patch notes, new content or other important updates.</p>
-        </div>
-      </div>
-      <div class="card-transparent" style="width: 20rem;">
-        <a href={{ route('Member Blog Page') }}>
-            <img class="card-img-top" src="{{asset('storage/image/blog.jpg')}}" alt="Card image cap">
-        </a>
-        <div class="card-body">
-            <h5 class="card-title" style="color:white;">Community Blog</h5>
-          <p class="card-text" style="color:white;">Interact and share your though about the game with the Tokotoko community!</p>
-        </div>
-      </div>
-    </div>
-</div>
+  </div>
 @endsection

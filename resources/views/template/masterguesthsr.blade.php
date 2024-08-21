@@ -14,7 +14,7 @@
 <nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-3">
     <div class="container">
         <a class="navbar-brand" href="/" >
-            <img src="{{asset('storage/image/logo.png')}}"  height="50" alt="">
+            <img src="{{asset('storage/image/logo.png')}}"  style="margin-bottom:15px;" height="60" alt="">
             <span style="color:white; font-family:Brush Script Std; font-size: 30px;">HoshiLab</span>
         </a>
         <ul class="navbar-nav me-auto">
@@ -30,25 +30,33 @@
                       Tier List
                     </a>
                     <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="{{ route('Guest Tier List Honkai Star Rail Page') }}">Memory of Chaos</a></li>
-                      <li><a class="dropdown-item" href="{{route('Guest Tier List Honkai Star Rail Page')}}">Pure Fiction</a></li>
+                      <li><a class="dropdown-item" href="{{ route('Guest Tier List MOC Honkai Star Rail Page') }}">Memory of Chaos</a></li>
+                      <li><a class="dropdown-item" href="{{route('Guest Tier List PF Honkai Star Rail Page')}}">Pure Fiction</a></li>
                     </ul>
                 </li>
             </ul>
             <li class="nav-item">
-                <a class="nav-link active" href={{ route('Guest Weapon Genshin Page') }}>Lightcone</a>
+                <a class="nav-link active" href={{ route('Guest Lightcone Page') }}>Lightcone</a>
+            </li>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:white;">
+                      Relics
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href={{ route('Guest Relic Page') }}>Relic</a></li>
+                      <li><a class="dropdown-item" href={{ route('Guest Planar Page') }}>Planar Ornament</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <li class="nav-item">
+                <a class="nav-link active" href={{ route('Guest Guide Honkai Star Rail Page') }}>Guide</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link active" href={{ route('Guest Stigmata Page') }}>Relic</a>
+                <a class="nav-link active" href={{ route('Guest Star Rail News Page') }}>News</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link active" href={{ route('Guest Guide Page') }}>Guide</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link active" href={{ route('Guest News Page') }}>News</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link active" href={{ route('Member Blog Page') }}>Forum</a>
+                <a class="nav-link active" href={{ route('Member HSR Forum Page') }}>Forum</a>
             </li>
         </ul>
         <a href="/login" class="btn btn-outline-dark" style="color:white;">Login</a>

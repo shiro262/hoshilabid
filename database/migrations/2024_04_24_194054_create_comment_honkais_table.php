@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('comment_honkais', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('posthi3_id');
+            $table->foreignId('post_honkai_id');
             $table->longText('detail');
             $table->foreignId('user_id');
             $table->timestamps();
